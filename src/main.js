@@ -6,6 +6,11 @@ import Exchange from './services/exchangeRate.js';
 
 //Business Logic//
 
+function clearFields() {
+  $('#usDollar').val();
+  $('#displayExchange').append("");
+}
+
 function displayExchange(response) {
   let usDollar = $('#usDollar').val();
   for(let property in response.conversion_rates) {
@@ -15,15 +20,24 @@ function displayExchange(response) {
   }
 }
 
+function displayErrors(error) {
+  $('#errors').text(`${error}`);
+}
+
 
 //User Interface Logic//
 
 $(document).ready(function() {
-  $("#findRate").click(function() {
+  $("#findRate").click(function(event) {
+    clearFields();
+    event.preventDefault();
     Exchange.getExchange()
       .then(function(response) {
         displayExchange(response);
         console.log(response);
+      })
+      .catch(function(error) {
+        displayErrors(error.message);
       });
   });
 });
