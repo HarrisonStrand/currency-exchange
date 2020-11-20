@@ -10,7 +10,8 @@ function displayExchange(response) {
   let usDollar = $('#usDollar').val();
   for(let property in response.conversion_rates) {
     if (response.conversion_rates) {
-      $('#displayExchange').append((usDollar * `${response.conversion_rates[property]}`) + " " + "<br>");
+      $('#displayCurrency').append(`${property}` + "<br>");
+      $('#displayExchange').append(usDollar * `${response.conversion_rates[property]}` + " " + "<br>");
     }
   }
 }
