@@ -12,12 +12,12 @@ function clearFields() {
 }
 
 function chooseExchange(response) {
-    let currencyArr = [];
-    const currency = `${response.conversion_rates}`;
-    for(let i = 0; i <= currency.length - 1; i++) {
-      currencyArr.push(currency[i]);
-      console.log(currencyArr);
+  for(property in response.conversion_rates) {
+    if (response.conversion_rates) {
+      $('#choose').append('<label><input type="checkbox" id="' + `${property}` + '" value="1">AED</label>');
     }
+  }
+  console.log(currencyArr);
 }
 
 // function displayExchange(response) {
