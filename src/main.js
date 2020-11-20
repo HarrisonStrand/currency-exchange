@@ -7,10 +7,10 @@ import Exchange from './services/exchangeRate.js';
 //Business Logic//
 
 function displayExchange(response) {
+  let usDollar = $('#usDollar').val();
   for(let property in response.conversion_rates) {
     if (response.conversion_rates) {
-      $('#displayExchange').append(`${response.conversion_rates} `);
-      $('#displayExchange').append(`${response.conversion_rates[property]} `);
+      $('#displayExchange').append((usDollar * `${response.conversion_rates[property]}`) + " " + "<br>");
     }
   }
 }

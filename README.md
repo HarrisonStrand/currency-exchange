@@ -29,7 +29,12 @@ No known bugs.
 | Describe:  | Input | Output |
 | :-----------------------------------| :------------- | :------------- |
 | Exchange( ) | | |
-|  |  |  |
+| It will call the exchange rate API to get a response | Exchange => fetch(`https...`) | response |
+| It will contain a static method to use for response in UI | Exchange => getExchange( ) | getExchange( ) |
+| get Exchange ( ) | | |
+| It will return the fetched API to be used elswhere in the project | static getExchange() | return fetch(`https...`) |
+| It will throw an error if response is not 200 | getExchange() | throw Error |
+| It will 
 
 ## Technologies Used
 Visual Studio Code
