@@ -8,14 +8,14 @@ import Exchange from './services/exchangeRate.js';
 
 function clearFields() {
   $('#usDollar').val();
-  $('#displayExchange').append("");
+  $('#displayExchange').text("");
 }
 
 function displayExchange(response) {
   let usDollar = $('#usDollar').val();
   for(let property in response.conversion_rates) {
     if (response.conversion_rates) {
-      $('#displayExchange').append(`${property}` + " " + usDollar * `${response.conversion_rates[property]}` + "<br><br>");
+      $('#displayExchange').append(`${property}:` + " " + usDollar * `${response.conversion_rates[property]}` + "<br><br>");
     }
   }
 }
@@ -28,16 +28,17 @@ function displayErrors(error) {
 //User Interface Logic//
 
 $(document).ready(function() {
-  $("#findRate").click(function(event) {
-    clearFields();
+  $('#findRate').click(function(event) {
     event.preventDefault();
     Exchange.getExchange()
       .then(function(response) {
         displayExchange(response);
-        console.log(response);
       })
       .catch(function(error) {
         displayErrors(error.message);
       });
+    $('#clear').click(function() {
+      clearFields();
+    })
   });
 });
