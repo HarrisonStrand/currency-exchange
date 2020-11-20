@@ -1,0 +1,15 @@
+#rateOutput {
+  padding: 20px;
+  margin-top: 350px;
+  height: 50%;
+}
+
+#userEntry {
+  padding: 20px;
+  margin-top: 500px;
+}
+
+#displayCurrency, #displayExchange {
+  font-size: 20px;
+  
+}

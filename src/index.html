@@ -8,15 +8,26 @@
 <body>
   <div class="container">
     <form id="findExchange">
-      <input type="number" id="usDollar" placeholder="Enter amount in USD...">
-      <button type="button" id="findRate" class="btn btn-success">Find Exchange</button>
-      <button type="button" id="clear" class="btn btn-danger">Clear</button>
-      <ul id="displayCurrency">
-      </ul>
-      <ul id="displayExchange">
-      </ul>
-      <ul id="errors">
-      </ul>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card" id="userEntry">
+            <input type="number" id="usDollar" placeholder="Enter amount in USD...">
+            <button type="button" id="findRate" class="btn btn-success">Find Exchange</button>
+            <button type="button" id="clear" class="btn btn-danger">Clear</button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card" id="rateOutput">
+            <label><input type="checkbox" id="AED" value="1">AED</label>
+            <ul id="displayCurrency">
+            </ul>
+            <ul id="displayExchange">
+            </ul>
+            <ul id="errors">
+            </ul>
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </body>

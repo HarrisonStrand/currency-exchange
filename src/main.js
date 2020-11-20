@@ -11,14 +11,23 @@ function clearFields() {
   $('#displayExchange').text("");
 }
 
-function displayExchange(response) {
-  let usDollar = $('#usDollar').val();
-  for(let property in response.conversion_rates) {
-    if (response.conversion_rates) {
-      $('#displayExchange').append(`${property}:` + " " + usDollar * `${response.conversion_rates[property]}` + "<br><br>");
+function chooseExchange(response) {
+    let currencyArr = [];
+    const currency = `${response.conversion_rates}`;
+    for(let i = 0; i <= currency.length - 1; i++) {
+      currencyArr.push(currency[i]);
+      console.log(currencyArr);
     }
-  }
 }
+
+// function displayExchange(response) {
+//   let usDollar = $('#usDollar').val();
+//   for(let property in response.conversion_rates) {
+//     if (response.conversion_rates) {
+//       $('#displayExchange').append(`${property}:` + " " + usDollar * `${response.conversion_rates[property]}`+ " ");
+//     }
+//   }
+// }
 
 function displayErrors(error) {
   $('#errors').text(`${error}`);
@@ -32,13 +41,14 @@ $(document).ready(function() {
     event.preventDefault();
     Exchange.getExchange()
       .then(function(response) {
-        displayExchange(response);
+        // displayExchange(response);
+        chooseExchange(response);
       })
       .catch(function(error) {
         displayErrors(error.message);
       });
     $('#clear').click(function() {
       clearFields();
-    })
+    });
   });
 });
