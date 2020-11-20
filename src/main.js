@@ -13,5 +13,7 @@ function displayExchange(response) {
 //User Interface Logic//
 
 $(document).ready(function() {
+  $("#rates").click(function() {
 
+  });
 });
