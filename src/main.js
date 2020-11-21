@@ -11,8 +11,6 @@ function clearFields() {
   $('#displayExchange').text("");
 }
 
-
-
 function displayExchange(response) {
   let usDollar = $('#usDollar').val();
   for(let property in response.conversion_rates) {
