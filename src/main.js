@@ -17,6 +17,8 @@ function displayExchange(response, usDollar, currency) {
     $('#displayExchange').text("$" + usDollar + " in BGN: " + (`${response.conversion_rates.BGN}` * usDollar).toFixed(2)); 
   } else if (currency === "BRL") {
     $('#displayExchange').text("$" + usDollar + " in BRL: " + (`${response.conversion_rates.BRL}` * usDollar).toFixed(2)); 
+  } else if (!currency) {
+    $('#displayExchange').text("Please select a currency in the options above");
   } else {
     $('#displayExchange').text(`There was an error: ${response.message}`);
   }
