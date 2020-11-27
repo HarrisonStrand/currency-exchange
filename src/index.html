@@ -9,22 +9,35 @@
   <div class="container">
     <form id="findExchange">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="card" id="userEntry">
-            <input type="number" id="usDollar" placeholder="Enter amount in USD...">
-            <button type="submit" id="findRate" class="btn btn-success">Find Exchange</button>
-          </div>
-        </div>
-        <div class="col-lg-6">
+        <div class="col-lg">
           <div class="card" id="rateOutput">
+            <div class="card" id="banner1Text">
+              <p>Currency Options:</p>
+            </div>
             <div id="choose">
               <label><input type="radio" id="AED" value="AED" name="currencies">AED</label>
               <label><input type="radio" id="ARS" value="ARS" name="currencies">ARS</label>
               <label><input type="radio" id="AUD" value="AUD" name="currencies">AUD</label>
               <label><input type="radio" id="BGN" value="BGN" name="currencies">BGN</label>
               <label><input type="radio" id="BRL" value="BRL" name="currencies">BRL</label>
-              <div id="displayExchange"></div>
             </div>
+          </div>
+        </div>
+        <div class="col-lg">
+          <div class="card" id="userEntry">
+            <div class="card" id="banner2Text">
+              <p>Enter Amount:</p>
+            </div>
+            <input type="number" id="usDollar" placeholder="Enter amount in USD...">
+            <button type="submit" id="findRate" class="btn btn-success">Find Exchange</button>
+          </div>
+        </div>
+        <div class="col-lg">
+          <div class="card" id="exchangeOutome">
+            <div class="card" id="banner3Text">
+              <p>Exchange Rate:</p>
+            </div>
+            <div id="displayExchange"></div>
           </div>
         </div>
       </div>

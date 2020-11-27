@@ -31,7 +31,7 @@ $(document).ready(function() {
   $('#findRate').click(function(event) {
     event.preventDefault();
     let usDollar = $('#usDollar').val();
-    $('#usDollar').val();
+    $('#usDollar').val("");
     let currency = $('input:radio:checked').val();
     Exchange.getExchange()
       .then(function(response) {

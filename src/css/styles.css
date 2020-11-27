@@ -1,15 +1,53 @@
+#banner1Text {
+  text-align: center;
+  height: 30px;
+  margin: 3px;
+}
+
 #rateOutput {
-  padding: 20px;
   margin-top: 350px;
   height: 50%;
+  font-size: 20px;
+}
+
+#choose {
+  padding: 5px;
+}
+
+#banner2Text {
+  text-align: center;
+  height: 30px;
+  margin: 3px;
 }
 
 #userEntry {
-  padding: 20px;
-  margin-top: 500px;
+  margin-top: 350px;
+  font-size: 20px;
+  height: 50%;
 }
 
-#displayCurrency, #displayExchange {
-  font-size: 20px;
-  
+#usDollar, #findRate {
+  margin: 20px;
 }
+
+#banner3Text {
+  text-align: center;
+  height: 30px;
+  margin: 3px;
+}
+
+#exchangeOutome {
+  margin-top: 350px;
+  height: 50%;
+  font-size: 20px;
+}
+
+#displayExchange {
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
