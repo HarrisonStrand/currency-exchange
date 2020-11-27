@@ -6,13 +6,14 @@ import Exchange from './services/exchangeRate.js';
 
 //Business Logic//
 
-function displayExchange(response) {
-  for(let property in response.conversion_rates) {
-    if (response.conversion_rates) {
-      $('#displayExchange').append(`${property}:` + " " + usDollar * `${response.conversion_rates[property]}`+ " ");
-    }
+function displayExchange(response, usDollar, currency) {
+  if (currency === "AED") {
+    $('#displayExchange').text("$" + usDollar + " in AED: " + (`${response.conversion_rates.AED}` * usDollar)); 
+  } else {
+    $('#displayExchange').text(`There was an error: ${response.message}`);
   }
 }
+
 
 //User Interface Logic//
 
@@ -21,9 +22,10 @@ $(document).ready(function() {
     event.preventDefault();
     let usDollar = $('#usDollar').val();
     $('#usDollar').val();
+    let currency = $('input:radio:checked').val();
     Exchange.getExchange()
       .then(function(response) {
-        displayExchange(response);
-      })
+        displayExchange(response, usDollar, currency);
+      });
   });
 });
