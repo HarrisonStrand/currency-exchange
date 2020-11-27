@@ -8,7 +8,15 @@ import Exchange from './services/exchangeRate.js';
 
 function displayExchange(response, usDollar, currency) {
   if (currency === "AED") {
-    $('#displayExchange').text("$" + usDollar + " in AED: " + (`${response.conversion_rates.AED}` * usDollar)); 
+    $('#displayExchange').text("$" + usDollar + " in AED: " + (`${response.conversion_rates.AED}` * usDollar).toFixed(2)); 
+  } else if (currency === "ARS") {
+    $('#displayExchange').text("$" + usDollar + " in ARS: " + (`${response.conversion_rates.ARS}` * usDollar).toFixed(2)); 
+  } else if (currency === "AUD") {
+    $('#displayExchange').text("$" + usDollar + " in AUD: " + (`${response.conversion_rates.AUD}` * usDollar).toFixed(2)); 
+  } else if (currency === "BGN") {
+    $('#displayExchange').text("$" + usDollar + " in BGN: " + (`${response.conversion_rates.BGN}` * usDollar).toFixed(2)); 
+  } else if (currency === "BRL") {
+    $('#displayExchange').text("$" + usDollar + " in BRL: " + (`${response.conversion_rates.BRL}` * usDollar).toFixed(2)); 
   } else {
     $('#displayExchange').text(`There was an error: ${response.message}`);
   }
