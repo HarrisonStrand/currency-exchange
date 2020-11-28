@@ -9,12 +9,12 @@
 !!Program Requires Node and webpack as well as your own API_KEY!!
 
 #### View Online
-* visit: https://harrisonstrand.github.io/currency-exchange
+* visit: https://harrisonstrand.github.io/currency-exchange/
 #### Open Locally
 1. Navigate to https://github.com/HarrisonStrand/currency-exchange 
 2. Click on the green 'Code' button and copy the repository HTTPS URL
 3. (a) Open your machine terminal and type in the command 'git clone 
-https://github.com/HarrisonStrand/planet-lifespan.git' in the directory you would like to clone the repository.
+https://github.com/HarrisonStrand/currency-exchange' in the directory you would like to clone the repository.
 (b) Alternatively, click 'Download Zip' and open the file on your machine
 4. Navigate to your terminal and type: NMP INSTALL
 5. create your own API key from https://app.exchangerate-api.com and place it in a .env file in the project's main directory
