@@ -1,10 +1,26 @@
+body {
+  background: url(https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_lossy/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0cbc780d-3f55-4652-aba2-4f83ead62e2a_800x450.gif);
+  background-color:black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Banner 1 */
+
 #banner1Text {
+  color: white;
+  background: rgb(133,124,105);
+  background: linear-gradient(0deg, rgba(133, 121, 97, 0.815) 0%, rgba(85, 71, 51, 0.849) 98%);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   height: 30px;
   margin: 3px;
 }
 
 #rateOutput {
+  background: rgb(133,124,105);
+  background: linear-gradient(180deg, rgba(133, 124, 105, 0.815) 0%, rgba(85, 74, 58, 0.849) 98%);
   margin-top: 100px;
   margin-bottom: 20px;
   height: 85%;
@@ -12,40 +28,62 @@
 }
 
 #choose {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   padding: 5px;
   font-size: 15px;
 }
 
+/* Banner 2 */
+
 #banner2Text {
+  color: white;
+  background: rgb(133,124,105);
+  background: linear-gradient(0deg, rgba(133, 121, 97, 0.815) 0%, rgba(85, 71, 51, 0.849) 98%);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   height: 30px;
   margin: 3px;
 }
 
 #userEntry {
+  background: rgb(133,124,105);
+  background: linear-gradient(180deg, rgba(133, 124, 105, 0.815) 0%, rgba(85, 74, 58, 0.849) 98%);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-top: 100px;
   font-size: 20px;
   height: 85%;
 }
 
 #usDollar, #findRate {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 20px;
 }
 
+/* Banner 3 */
+
 #banner3Text {
+  color: white;
+  background: rgb(133,124,105);
+  background: linear-gradient(0deg, rgba(133, 121, 97, 0.815) 0%, rgba(85, 71, 51, 0.849) 98%);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   height: 30px;
   margin: 3px;
 }
 
 #exchangeOutome {
+  background: rgb(133,124,105);
+  background: linear-gradient(180deg, rgba(133, 124, 105, 0.815) 0%, rgba(85, 74, 58, 0.849) 98%);
   margin-top: 100px;
   height: 85%;
   font-size: 20px;
 }
 
 #displayExchange {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   margin-top: 100px;
   padding-bottom: 20px;
@@ -53,4 +91,6 @@
   padding-right: 20px;
 }
 
-
+#noEntry {
+  color: red;
+}

@@ -110,7 +110,7 @@ function displayExchange(response, usDollar, currency) {
   } else if (currency === "ZAR") {
     $('#displayExchange').text("$" + usDollar + " in ZAR: " + (`${response.conversion_rates.ZAR}` * usDollar).toFixed(2)); 
   } else if (!currency) {
-    $('#displayExchange').text("Please select a currency in the options above");
+    $('#displayExchange').text("Please select a currency in the first box");
   } else {
     $('#displayExchange').text(`There was an error: ${response.message}`);
   }
