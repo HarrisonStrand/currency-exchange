@@ -16,9 +16,11 @@
 3. (a) Open your machine terminal and type in the command 'git clone 
 https://github.com/HarrisonStrand/currency-exchange' in the directory you would like to clone the repository.
 (b) Alternatively, click 'Download Zip' and open the file on your machine
-4. Navigate to your terminal and type: NMP INSTALL
-5. create your own API key from https://app.exchangerate-api.com and place it in a .env file in the project's main directory
-5. Open the index.html file on a live server to view the website, run 'npm run build' in your terminal, or use an IDE to view the code language.
+4. Navigate to your terminal and run: 'NPM INSTALL'
+5. Create your own API key from https://app.exchangerate-api.com and follow instructions to copy the key from your email
+6. Create a .env file in the project's main directory
+7. Paste your API key in the .env file with the variable name API_KEY=[your api key goes here]
+8. To start the project server, navigate to your terminal and run: 'NPM RUN START'
 
 #### Known Bugs
 No known bugs.
