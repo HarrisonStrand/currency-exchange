@@ -7,7 +7,7 @@ import Exchange from './services/exchangeRate.js';
 //Business Logic//
 
 function displayExchange(response, usDollar, currency) {
-  if ((!currency) && (response.status != 'success')) {
+  if (response.result != 'success') {
     $('#displayExchange').text(`There was an error: ${response.message}`);
   } else if (!currency) {
     $('#displayExchange').text('Please select a currency in first box');
@@ -16,7 +16,7 @@ function displayExchange(response, usDollar, currency) {
   } else if (response.result === 'success') {
     $('#displayExchange').text(`${usDollar} in ${currency}: ${response.conversion_rates[currency]*usDollar}`); 
   } else {
-    $('#displayExchange').text(`There was an error: ${response.message}`);
+    $('#displayExchange').text(`There was an unhandled error!`);
   }
 }
 
